@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta name="description" content="">
+
+	<title>Vue.js</title>
+
+</head>
+<body>
+	<main>
+	
+		<h1 v-show="conectado">Estoy conectado</h1>
+		<h1 v-if="conectado">Estoy conectado</h1>
+		<h2 v-if="edad < 18">No puedes entrar.</h2>
+		<h2 v-else-if="edad > 200">Eres inmortal.</h2>
+		<h2 v-else>Puedes entrar.</h2>
+
+		<template v-if="conectado">
+			<h3>Bienvenido Javi</h3>
+			<ul>
+				<li>
+					<a href="#">Enlace</a>
+					<a href="#">Enlace</a>
+					<a href="#">Enlace</a>
+				</li>
+			</ul>
+		</template>
+
+		<h4 v-else>No estás conectado :(</h4>
+
+		<pre>{{ $data }}</pre>
+</main>
+
+	<script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>
